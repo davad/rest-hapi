@@ -179,7 +179,7 @@ DELETE /role/{ownerId}/user/{childId}   Remove a single user object from a role'
 
 ## MANY_MANY
 
-Below is an example of a many-many relationship between the ``user`` and``group`` models. In this relationship a single ``user`` instance can belong to multiple ``group`` instances and vice versa.
+Below is an example of a many-many relationship between the ``user`` and ``group`` models. In this relationship a single ``user`` instance can belong to multiple ``group`` instances and vice versa.
 
 
 ```javascript
@@ -273,7 +273,7 @@ DELETE /group/{ownerId}/user/{childId}  Remove a single user object from a group
 
 Many-many relationships can include extra fields that contain data specific to each association instance.  This is accomplished through linking models which behave similar to junction tables in a relational database.  Linking model files are stored in the ``/models/linking-models`` directory and follow the same ``{model name}.model.js`` format as normal models.  Below is an example of a many-many relationship between the ``user`` model and itself through the ``friends`` association. The extra field ``friendsSince`` could contain a date representing how long the two associated users have known each other.  This example also displays how models can contain a reference to themselves.  
 
-> **NOTE**: The linking model filename does not have to match the model name, however the ``linkingModel`` association property **must** match the linking model ``modleName`` property.
+> **NOTE**: The linking model filename does not have to match the model name, however the ``linkingModel`` association property **must** match the linking model ``modelName`` property.
 
 
 ```javascript
